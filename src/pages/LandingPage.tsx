@@ -89,7 +89,7 @@ const LandingPage: React.FC = () => {
             "One can't understand everything at once, we can't begin with perfection all at once! In order to reach perfection one must begin by being ignorant of a great deal. And if we understand things too quickly, perhaps we shan't understand them thoroughly".- Fyodor Dostoevsky from The Idiot
           </p>
           <p className="text-sm">
-            @2025 shoutout mama, papa, friends, and my lalabs
+            @2025 shoutout mama, papa, siblings, family, friends, and my lalabs
           </p>
         </div>
       </footer>
