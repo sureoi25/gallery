@@ -1,6 +1,7 @@
 import React from 'react';
 import { Gallery } from './gallery';
 import RadialNavigationButton from './radialNavigationButton';
+import {Link} from 'react-router-dom';
 
 type DimensionPageProps = {
   title: string;
@@ -33,17 +34,14 @@ const DimensionPageTemplate: React.FC<DimensionPageProps> = ({
     <div className="bg-spotify-black min-h-screen p-6">
       <div className="max-w-7xl mx-auto">
         {/* Back button */}
-        <div className="flex items-center mb-10">
-          <a
-            href="/"
-            className="flex items-center text-spotify-text-gray hover:text-spotify-green transition-colors"
-          >
-            <svg className="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-            </svg>
-            Back to Main page
-          </a>
-        </div>
+        <Link
+          to="/"
+          className="flex items-center text-spotify-text-gray hover:text-spotify-green transition-colors">
+          <svg className="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+          </svg>
+          Back to Main page
+        </Link>
 
         {/* header */}
         <div className="text-center mb-12">

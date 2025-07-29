@@ -1,6 +1,8 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import LandingPage from './pages/LandingPage';
 import Layout from './components/Layout';
+import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import PhysicalSelf from './pages/physicalSelf';
 import MaterialSelf from './pages/materialSelf';
@@ -11,7 +13,15 @@ import SpiritualSelf from './pages/spiritualSelf';
 import { MusicPlayerProvider } from './contexts/MusicPlayerContext';
 
 function App() {
+  const navigate = useNavigate();
   return (
+    useEffect(() => {
+      if (sessionStorage.redirect) {
+        const redirect = sessionStorage.redirect;
+        delete sessionStorage.redirect;
+        navigate(redirect.replace(window.location.origin + '/gallery', ''));
+      }
+    }, [navigate]),
     <MusicPlayerProvider>
     <Router>
       <Layout>
