@@ -10,4 +10,8 @@ export default defineConfig({
     postcss: './postcss.config.cjs',
   },
   base: "/gallery/",
+  build: {
+    assetsDir: '.',
+    outDir: 'dist',
+  }
 });
