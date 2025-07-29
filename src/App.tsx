@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import LandingPage from './pages/LandingPage';
 import Layout from './components/Layout';
 import { useEffect } from 'react';
@@ -12,38 +12,46 @@ import PoliticalSelf from './pages/politicalSelf';
 import SpiritualSelf from './pages/spiritualSelf';
 import { MusicPlayerProvider } from './contexts/MusicPlayerContext';
 
-function App() {
+function AppRoutes() {
   const navigate = useNavigate();
+
+  useEffect(() => {
+    if (sessionStorage.redirect) {
+      const redirect = sessionStorage.redirect;
+      delete sessionStorage.redirect;
+      navigate(redirect.replace(window.location.origin, ''));
+    }
+  }, [navigate]);
+
   return (
-    useEffect(() => {
-      if (sessionStorage.redirect) {
-        const redirect = sessionStorage.redirect;
-        delete sessionStorage.redirect;
-        navigate(redirect.replace(window.location.origin + '/gallery', ''));
-      }
-    }, [navigate]),
+    <div className="App">
+      <Routes>
+        {/*landing page*/}
+        <Route path="/" element={<LandingPage />} />
+        
+        {/*page routes*/}
+        <Route path="/physical-self" element={<PhysicalSelf />} />
+        <Route path="/material-self" element={<MaterialSelf />} />
+        <Route path="/sexual-self" element={<SexualSelf />} />
+        <Route path="/political-self" element={<PoliticalSelf />} />
+        <Route path="/spiritual-self" element={<SpiritualSelf />} />
+        <Route path="/digital-self" element={<DigitalSelf />} />
+        
+        {/* Catch all route - redirect to home */}
+        <Route path="*" element={<LandingPage />} />
+      </Routes>
+    </div>
+  );
+}
+
+function App() {
+  return (
     <MusicPlayerProvider>
-    <Router>
-      <Layout>
-      <div className="App">
-        <Routes>
-          {/*landing page*/}
-          <Route path="/" element={<LandingPage />} />
-          
-          {/*page routes*/}
-          <Route path="/physical-self" element={<PhysicalSelf />} />
-          <Route path="/material-self" element={<MaterialSelf />} />
-          <Route path="/sexual-self" element={<SexualSelf />} />
-          <Route path="/political-self" element={<PoliticalSelf />} />
-          <Route path="/spiritual-self" element={<SpiritualSelf />} />
-          <Route path="/digital-self" element={<DigitalSelf />} />
-          
-          {/* Catch all route - redirect to home */}
-          <Route path="*" element={<LandingPage />} />
-        </Routes>
-      </div>
-      </Layout>
-    </Router>
+      <Router>
+        <Layout>
+          <AppRoutes />
+        </Layout>
+      </Router>
     </MusicPlayerProvider>
   );
 }
