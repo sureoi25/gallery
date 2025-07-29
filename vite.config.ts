@@ -9,5 +9,5 @@ export default defineConfig({
   css: {
     postcss: './postcss.config.cjs',
   },
-  base: "gallery",
+  base: "/gallery/",
 });
