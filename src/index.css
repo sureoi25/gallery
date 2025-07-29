@@ -1,0 +1,46 @@
+@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --spotify-black: #121212;
+  --spotify-dark-gray: #181818;
+  --spotify-light-gray: #282828;
+  --spotify-text: #ffffff;
+  --spotify-text-gray: #b3b3b3;
+  --spotify-green: #1db954;
+  --spotify-light-green: #1ed760;
+}
+
+body {
+  background-color: var(--spotify-black);
+  color: var(--spotify-text);
+  font-family: 'Circular', system-ui, -apple-system, sans-serif;
+}
+
+@layer base {
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold;
+  }
+  h1 {
+    @apply text-4xl;
+  }
+  h2 {
+    @apply text-3xl;
+  }
+  h3 {
+    @apply text-2xl;
+  }
+}
+
+/*enter page animations*/
+.page-enter {
+  opacity: 0;
+  transform: translateY(20px);
+}
+.page-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 300ms ease-out;
+}
