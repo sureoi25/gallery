@@ -13,10 +13,10 @@ const SpiritualSelf: React.FC = () => {
     }, [currentTrack, playTrack]);
 
   const images = [
-    'images/spiritual/spiritual1.jpg',
-    'images/spiritual/spiritual2.jpg',
-    'images/spiritual/spiritual3.jpg',
-    'images/spiritual/spiritual4.jpg',
+    '/images/spiritual/spiritual1.jpg',
+    '/images/spiritual/spiritual2.jpg',
+    '/images/spiritual/spiritual3.jpg',
+    '/images/spiritual/spiritual4.jpg',
   ]
 
 

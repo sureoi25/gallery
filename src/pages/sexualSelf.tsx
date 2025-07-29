@@ -13,10 +13,10 @@ const SexualSelf: React.FC = () => {
     }, [currentTrack, playTrack]);
 
   const images = [
-    'images/sexual/love1.jpg',
-    'images/sexual/love2.png',
-    'images/sexual/love3.jpg',
-    'images/sexual/love4.jpg',
+    '/images/sexual/love1.jpg',
+    '/images/sexual/love2.png',
+    '/images/sexual/love3.jpg',
+    '/images/sexual/love4.jpg',
 
   ];
 
