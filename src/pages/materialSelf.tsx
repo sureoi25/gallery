@@ -14,10 +14,10 @@ const MaterialSelf: React.FC = () => {
   }, [currentTrack, playTrack]);
   
   const images = [
-    '/images/material/material1.jpg',
-    '/images/material/material2.jpg',
-    '/images/material/material3.jpg',
-    '/images/material/material5.jpg',
+    './images/material/material1.jpg',
+    './images/material/material2.jpg',
+    './images/material/material3.jpg',
+    './images/material/material5.jpg',
   ];
 
   return (
