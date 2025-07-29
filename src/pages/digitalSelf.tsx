@@ -13,10 +13,10 @@ const DigitalSelf: React.FC = () => {
   }, [currentTrack, playTrack]);
 
   const images = [
-    './images/digital/digital1.png',
-    './images/digital/digital2.png',
-    './images/digital/digital3.png',
-    './images/digital/digital4.png',
+    '/gallery/images/digital/digital1.png',
+    '/gallery/images/digital/digital2.png',
+    '/gallery/images/digital/digital3.png',
+    '/gallery/images/digital/digital4.png',
   ];
 
   return (

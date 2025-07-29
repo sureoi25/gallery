@@ -13,10 +13,10 @@ const PoliticalSelf: React.FC = () => {
     }, [currentTrack, playTrack]);
 
   const images = [
-    './images/political/world government.jpg',
-    './images/political/leni.jpg',
-    './images/political/political3.png',
-    './images/political/political4.jpg',
+    '/gallery/images/political/world government.jpg',
+    '/gallery/images/political/leni.jpg',
+    '/gallery/images/political/political3.png',
+    '/gallery/images/political/political4.jpg',
   ];
 
   return (

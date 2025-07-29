@@ -13,10 +13,10 @@ const PhysicalSelf: React.FC = () => {
   }, [currentTrack, playTrack]);
 
   const images = [
-    './images/physical/physical1.jpg',
-    './images/physical/physical2.jpg',
-    './images/physical/physical3.jpg',
-    './images/physical/physical4.jpg',
+    '/gallery/images/physical/physical1.jpg',
+    '/gallery/images/physical/physical2.jpg',
+    '/gallery/images/physical/physical3.jpg',
+    '/gallery/images/physical/physical4.jpg',
 
   ];
 
