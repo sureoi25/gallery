@@ -50,7 +50,7 @@ const MaterialSelf: React.FC = () => {
           </p>
 
           <p>
-            My high school diploma covered in relics from my girlfriend(letters and pictures), are a reminder of my highschool years. It signifies how far I have come, and how
+            My high school diploma, covered in relics from my girlfriend(letters and pictures), is a reminder of my highschool years. It signifies how far I have come and how
             much more there is left for me to experience and learn from. It is covered by my girlfriend's relics because she was the highlight of my senior high school
             years.
           </p>
